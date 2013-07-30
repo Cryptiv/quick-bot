@@ -25,8 +25,8 @@ IF(#ival >= 0);
         Echo(You rolled a %#roll%);
     ENDIF;
 
-    IF(%CHATMESSAGE% = "!f ally ****************");
-        LOGTO(users.txt,****************);
+    IF(%CHATMESSAGE% = !f ally \w{2,16});
+        ECHO(PENIS);
     ENDIF;
 
 ENDIF;
