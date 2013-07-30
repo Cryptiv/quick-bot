@@ -1,6 +1,5 @@
 //Director Names (only one's able to issue commands)
 UNSET(&operator[]);
-UNSET(&name[]);
 &operator[0] = "Pitviper";
 &operator[1] = "ImAlphaMale";
 &operator[2] = "Mavreckjc";
@@ -16,7 +15,6 @@ UNSET(&name[]);
 //&bot = "GROUP1";
 //&bot = %PLAYER%;
 &bot = %PLAYER%;
-&name = %&name[]%;
 
 //Makes it so only operators can send commands.
 INDEXOF(&operator[],#ival,%CHATPLAYER%);
@@ -27,9 +25,8 @@ IF(#ival >= 0);
         Echo(You rolled a %#roll%);
     ENDIF;
 
-    &faction_ally = !f ally turtles;
-    IF(%CHATMESSAGE% = %&faction_ally%);
-        Echo(AIDS);
+    IF(%CHATMESSAGE% = "!f ally ****************");
+        LOGTO(users.txt,****************);
     ENDIF;
 
 ENDIF;
