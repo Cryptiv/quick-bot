@@ -1,5 +1,6 @@
 //Director Names (only one's able to issue commands)
 UNSET(&operator[]);
+UNSET(&name[]);
 &operator[0] = "Pitviper";
 &operator[1] = "ImAlphaMale";
 &operator[2] = "Mavreckjc";
