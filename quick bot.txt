@@ -25,8 +25,9 @@ IF(#ival >= 0);
         Echo(You rolled a %#roll%);
     ENDIF;
 
-    IF(%CHATMESSAGE% = !f ally \w{2,16});
-        ECHO(PENIS);
+    MATCH(%CHATMESSAGE%,"!f (.*) \w{2,16}",&name);
+        REPLACE(&name,!f,/f);
+    ECHO(%&name%);
     ENDIF;
 
 ENDIF;
