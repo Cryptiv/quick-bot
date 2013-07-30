@@ -27,7 +27,7 @@ IF(#ival >= 0);
 
     MATCH(%CHATMESSAGE%,"!f (.*) \w{2,16}",&name);
         REPLACE(&name,!f,/f);
-    ECHO(%&name%);
+        ECHO(%&name%);
     UNSET(&name);
     ENDIF;
 
