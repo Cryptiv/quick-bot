@@ -27,7 +27,7 @@ IF(#ival >= 0);
     ENDIF;
 
     &faction_ally = !f ally turtles;
-    IF(%CHATMESSAGE% = "%&faction_ally%");
+    IF(%CHATMESSAGE% = %&faction_ally%);
         Echo(AIDS);
     ENDIF;
 
