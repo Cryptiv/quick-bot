@@ -1,0 +1,34 @@
+//Director Names (only one's able to issue commands)
+UNSET(&operator[]);
+&operator[0] = "Pitviper";
+&operator[1] = "ImAlphaMale";
+&operator[2] = "Mavreckjc";
+&operator[3] = "Swagreck";
+&operator[4] = "ArcanicNova";
+&operator[5] = "BananaBacon";
+&operator[6] = "PyschoDonut";
+&operator[7] = "quicktime115";
+&operator[8] = "iFamous";
+
+//What this bot identifies as. You can group multiple
+//bots if you set them to the same name. 
+//&bot = "GROUP1";
+//&bot = %PLAYER%;
+&bot = %PLAYER%;
+&name = %&name[]%;
+
+//Makes it so only operators can send commands.
+INDEXOF(&operator[],#ival,%CHATPLAYER%);
+IF(#ival >= 0);
+
+    IF(%CHATMESSAGE% = "!roll");
+        Random(#roll,1,6)
+        Echo(You rolled a %#roll%);
+    ENDIF;
+
+    &faction_ally = !f ally turtles;
+    IF(%CHATMESSAGE% = "%&faction_ally%");
+        Echo(AIDS);
+    ENDIF;
+
+ENDIF;
